@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
   <title>website
   </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/reset.css" rel="stylesheet" type="text/css" />
   <link href="./css/project.css" rel="stylesheet" type="text/css" />
 </head>
@@ -16,7 +17,10 @@
             <img src="./images/gigifilms_logo_wit.png" alt="Gigifilms Logo">
         </a>
     </div>
-    <div class="nav-links">
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+    <div class="nav-links" id="nav-links">
         <a href="./about.html">about</a>
         <a href="./project.html">projecten</a>
         <a href="./casting.html">casting</a>
@@ -32,8 +36,8 @@
  
            <h2>Ana + Yek</h2>
           <div class="lijn">  </div>
-            <p> Ana + Yek (Me + You) follows twin sisters Sanaa and Zohra. What begins as Zohra’ exploration of their Moroccan heritage gradually reveals the shifting dynamics of their relationship,
-                as Sanaa’s deepening love for Islam becomes more apparent. The film unfolds as a journey of mutual understanding — a cinematic dialogue fueled by their desire to connect. An intimate portrait of sisterly love and independence.</p>
+            <p> Ana + Yek (Me + You) follows twin sisters Sanaa and Zohra. What begins as Zohra' exploration of their Moroccan heritage gradually reveals the shifting dynamics of their relationship,
+                as Sanaa's deepening love for Islam becomes more apparent. The film unfolds as a journey of mutual understanding — a cinematic dialogue fueled by their desire to connect. An intimate portrait of sisterly love and independence.</p>
           <div class="foto">
             <img src="./images/img010.png"> </div>
  
@@ -62,9 +66,9 @@
                <p>Festivals selections<br>
  
                 Docville Leuven, 2024
-                FIDADOC festival International de documentaire d’Agadir, 2024
+                FIDADOC festival International de documentaire d'Agadir, 2024
                 Festival International du Cinéma de Montagne d'Ouzoud, 2024
-                Filem’On Film Festival for Young Audiences, Bruxelles, 2024
+                Filem'On Film Festival for Young Audiences, Bruxelles, 2024
                 Docfest Brugge, 2024</p>
  
  
@@ -93,10 +97,20 @@
        
            
 </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+ 
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+});
+</script>
  
  
  
  
 </body>
 </html>
- 
