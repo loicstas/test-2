@@ -429,7 +429,10 @@ font-size: 18px;
     padding: 20px;
     height: auto;
     min-height: 100vh;
-    gap: 20px;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: stretch;
   }
 
   .grid1 p:nth-child(1) {
@@ -437,6 +440,9 @@ font-size: 18px;
     color: white;
     margin-bottom: 30px;
     text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-style: italic;
   }
 
   .grid1 p {
@@ -444,6 +450,7 @@ font-size: 18px;
     color: white;
     margin-bottom: 5px;
     font-family: "Afacad", sans-serif;
+    text-align: left;
   }
 
   .grid1 input {
@@ -455,6 +462,137 @@ font-size: 18px;
     font-size: 16px;
     background-color: white;
     color: black;
+    box-sizing: border-box;
+  }
+
+  /* Form row styling for side-by-side inputs */
+  .form-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .form-row input {
+    flex: 1;
+    margin-bottom: 15px;
+  }
+
+  .form-row p {
+    flex: 1;
+    margin-bottom: 5px;
+  }
+
+  /* Specific styling for name fields */
+  .grid1 p:nth-child(2),
+  .grid1 p:nth-child(3) {
+    display: inline-block;
+    width: calc(50% - 5px);
+  }
+
+  .grid1 p:nth-child(3) {
+    margin-left: 10px;
+  }
+
+  .grid1 input:nth-child(4),
+  .grid1 input:nth-child(5) {
+    display: inline-block;
+    width: calc(50% - 5px);
+  }
+
+  .grid1 input:nth-child(5) {
+    margin-left: 10px;
+  }
+
+  /* ZIP and City fields */
+  .grid1 p:nth-child(8),
+  .grid1 p:nth-child(9) {
+    display: inline-block;
+    width: calc(50% - 5px);
+  }
+
+  .grid1 p:nth-child(9) {
+    margin-left: 10px;
+  }
+
+  .grid1 input:nth-child(10),
+  .grid1 input:nth-child(11) {
+    display: inline-block;
+    width: calc(50% - 5px);
+  }
+
+  .grid1 input:nth-child(11) {
+    margin-left: 10px;
+  }
+
+  /* Birth date, Language, Nationality fields */
+  .grid1 p:nth-child(12),
+  .grid1 p:nth-child(13),
+  .grid1 p:nth-child(14) {
+    display: inline-block;
+    width: calc(33.33% - 7px);
+  }
+
+  .grid1 p:nth-child(13),
+  .grid1 p:nth-child(14) {
+    margin-left: 10px;
+  }
+
+  .grid1 input:nth-child(15),
+  .grid1 input:nth-child(16),
+  .grid1 input:nth-child(17) {
+    display: inline-block;
+    width: calc(33.33% - 7px);
+  }
+
+  .grid1 input:nth-child(16),
+  .grid1 input:nth-child(17) {
+    margin-left: 10px;
+  }
+
+  /* Password fields */
+  .grid1 p:nth-child(20),
+  .grid1 p:nth-child(21) {
+    display: inline-block;
+    width: calc(50% - 5px);
+  }
+
+  .grid1 p:nth-child(21) {
+    margin-left: 10px;
+  }
+
+  .grid1 input:nth-child(22),
+  .grid1 input:nth-child(23) {
+    display: inline-block;
+    width: calc(50% - 5px);
+  }
+
+  .grid1 input:nth-child(23) {
+    margin-left: 10px;
+  }
+
+  /* Upload fields */
+  .grid1 p:nth-child(24),
+  .grid1 p:nth-child(25),
+  .grid1 p:nth-child(26) {
+    display: inline-block;
+    width: calc(33.33% - 7px);
+  }
+
+  .grid1 p:nth-child(25),
+  .grid1 p:nth-child(26) {
+    margin-left: 10px;
+  }
+
+  .grid1 input:nth-child(27),
+  .grid1 input:nth-child(28),
+  .grid1 input:nth-child(29) {
+    display: inline-block;
+    width: calc(33.33% - 7px);
+  }
+
+  .grid1 input:nth-child(28),
+  .grid1 input:nth-child(29) {
+    margin-left: 10px;
   }
 
   .btn-outline, .btn-filled {
@@ -465,6 +603,7 @@ font-size: 18px;
     display: block;
     text-align: center;
     font-size: 16px;
+    border-radius: 30px;
   }
 
   .btn-outline:hover {
@@ -477,16 +616,50 @@ font-size: 18px;
     background-color: #f0f0f0;
     transition: all 0.3s ease;
   }
+}
 
-  /* Form layout adjustments */
-  .form-row {
-    display: flex;
-    gap: 10px;
-    width: 100%;
+@media (max-width: 576px) {
+  .navbar {
+    padding: 15px;
   }
 
-  .form-row input {
-    flex: 1;
+  .grid1 {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .grid1 p:nth-child(1) {
+    font-size: 28px;
+  }
+
+  /* Stack all fields vertically on very small screens */
+  .grid1 p:nth-child(2),
+  .grid1 p:nth-child(3),
+  .grid1 input:nth-child(4),
+  .grid1 input:nth-child(5),
+  .grid1 p:nth-child(8),
+  .grid1 p:nth-child(9),
+  .grid1 input:nth-child(10),
+  .grid1 input:nth-child(11),
+  .grid1 p:nth-child(12),
+  .grid1 p:nth-child(13),
+  .grid1 p:nth-child(14),
+  .grid1 input:nth-child(15),
+  .grid1 input:nth-child(16),
+  .grid1 input:nth-child(17),
+  .grid1 p:nth-child(20),
+  .grid1 p:nth-child(21),
+  .grid1 input:nth-child(22),
+  .grid1 input:nth-child(23),
+  .grid1 p:nth-child(24),
+  .grid1 p:nth-child(25),
+  .grid1 p:nth-child(26),
+  .grid1 input:nth-child(27),
+  .grid1 input:nth-child(28),
+  .grid1 input:nth-child(29) {
+    display: block;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -625,4 +798,3 @@ font-size: 18px;
         font-size: 18px;
     }
 }
-
