@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
   <title>website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/reset.css" rel="stylesheet" type="text/css" />
   <link href="./css/register.css" rel="stylesheet" type="text/css" />
 </head>
@@ -15,7 +16,10 @@
             <img src="./images/gigifilms_logo_wit.png" alt="Gigifilms Logo">
         </a>
     </div>
-    <div class="nav-links">
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+    <div class="nav-links" id="nav-links">
         <a href="./about.html">about</a>
         <a href="./project.html">projecten</a>
         <a href="./casting.html">casting</a>
@@ -67,31 +71,58 @@
 </div>
 
 
-
-
-<div class="navbar">
-    <div class="logo">
-        <a href="./index.html">
-            <img src="./images/gigifilms_logo_wit.png" alt="Gigifilms Logo">
-        </a>
-    </div>
-    <div class="nav-links">
-        <a href="./about.html">about</a>
-        <a href="./project.html">projecten</a>
-        <a href="./casting.html">casting</a>
-        <a href="./talents.html">our talent</a>
-        <a href="./register.html">register as a talent</a> 
-    </div>
-</div>
-
-
-
-
-
-
-
-
 </main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="./images/gigifilms_logo_wit.png" alt="Gigifilms Logo">
+        </div>
+        
+        <div class="footer-sections">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./project.html">Projecten</a></li>
+                    <li><a href="./casting.html">Casting</a></li>
+                    <li><a href="./talents.html">Our Talent</a></li>
+                    <li><a href="./register.html">Register as Talent</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section footer-contact">
+                <h3>Contact</h3>
+                <p>Brussels, Belgium</p>
+                <p>info@gigifilms.be</p>
+                <p>+32 xxx xxx xxx</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Streetcasting</a></li>
+                    <li><a href="#">Talent Management</a></li>
+                    <li><a href="#">Film Production</a></li>
+                    <li><a href="#">Documentary</a></li>
+                </ul>
+            </div>
+        </div>
+        
+     
+    
+</footer>    
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+ 
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+});
+</script>
 
 
 
